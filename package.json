@@ -1,6 +1,6 @@
 {
   "name": "vrptojson",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "turns vrp files into json files",
   "main": "index.js",
   "scripts": {

@@ -1,6 +1,6 @@
 # VRPtoJSON
 
-This module parses .vrp files to .json. For a specification see [this site](http://neo.lcc.uma.es/vrp/vrp-instances/capacitated-vrp-instances/). The parser has only ben validated against the `Augerat et al.` instances.
+This module parses .vrp files to .json. For a specification see [this site](http://neo.lcc.uma.es/vrp/vrp-instances/capacitated-vrp-instances/). The parser has only been validated against the `Augerat et al.` instances.
 
 ## Usage
 The function accepts either a string or a buffer as the first parameter, and a dictionary of hooks as the second parameter.
@@ -9,7 +9,7 @@ The function accepts either a string or a buffer as the first parameter, and a d
 const fs = require( 'fs' );
 const parseVRP = require( 'vrptojson' );
 const file = fs.readFileSync( '../instances/A-VRP/A-n32-k5.vrp' );
-const instance = parse( file );
+const instance = parseVRP( file );
 ```
 
 Example Input:
@@ -73,7 +73,7 @@ const hooks = {
         }
     }
 }
-const instance = parse( file, hooks );
+const instance = parseVRP( file, hooks );
 ```
 This codes parses the "COMMENT" value and reads the best-known / optimum value. You have to return an dictionary of key value pairs that will be included in the final result.
 
